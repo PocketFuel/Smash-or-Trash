@@ -3,26 +3,31 @@
 ## What is it?
 
 A FCFS, Smash or Pass style, Single Elimination Tournament, where viewers vote on the coolest NFT. Vote are made in SPL tokens and go straight to the Pot. The top 3 winners take 10%, 6%, and 4% of the pot respectively. 
-Where can I play it?
+
+## Where can I play it?
 On Solana, you can play at TrashSmash.xyz
-Who built it? 
+
+## Who built it? 
 CrayHans (HANS_SOL_OG on X), a Degenerate Trash Panda community member.
-How much does it cost?
+
+## How much does it cost?
 It costs 0.05 SOL or $5 to play. It’s free to spectate but you vote in SPL tokens. The top 3 competitors and the top 100 voters get paid out of the Tournament pot so theres a chance you win it back or break even if you participate in the entire tournament.
-What tokens are supported?
-SOL
+
+## What tokens are supported?
+
+# SOL
 So11111111111111111111111111111111111111112
 
-USDC
+# USDC
 EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 
-RAIN
+# RAIN
 rainH85N1vCoerCi4cQ3w6mCf7oYUdrsTFtFzpaRwjL
 
-JUP
+# JUP
 JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
 
-Bonk
+# Bonk
 DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
 Components
 
