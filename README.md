@@ -1,5 +1,5 @@
-Smash or Trash
-What is it?
+#Smash or Trash
+##What is it?
 A FCFS, Smash or Pass style, Single Elimination Tournament, where viewers vote on the coolest NFT. Vote are made in SPL tokens and go straight to the Pot. The top 3 winners take 10%, 6%, and 4% of the pot respectively. 
 Where can I play it?
 On Solana, you can play at TrashSmash.xyz
