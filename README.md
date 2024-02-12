@@ -32,7 +32,7 @@ DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
 
 # Components
 
-## WalletBalance.tsx
+### WalletBalance.tsx
 A component designed to fetch and display the balance of a wallet address from the Solana blockchain.
 
 ## Currency.tsx
