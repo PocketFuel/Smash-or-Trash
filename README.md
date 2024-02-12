@@ -85,14 +85,20 @@ A section component that holds 8 TipButton.tsx components
 ## Tournament.tsx
 I think I need to put the Bracket.tsx component into another component called Tournament so I can mange the Tournament state. When the Tournament concludes I need to present a pop up modal wth an after action report of what happened in all the matches, each competitors vote counts, their total match pot contribution from spectators, and the total tournament pot numbers as well. The top 3 winners should be clearly displayed in the Leaderboard.tsx component and the top 100 voters by click would be displayed in order from most to least in the Top100Voters.tsx component.
 
-Leaderboard.tsx - This component displays the top 3 tournament winners after the tournament settles.
+## Leaderboard.tsx
+This component displays the top 3 tournament winners after the tournament settles.
 
-Top100Voters.tsx - This component displays The top 100 voters after the tournament settles.
+## Top100Voters.tsx 
+This component displays The top 100 voters after the tournament settles.
 
-Results.tsx - This is the popup modal component that shows up when the tournament concludes.
+## Results.tsx
+This is the popup modal component that shows up when the tournament concludes.
 
-Share.tsx - This component allows people to share the game on social media
+## Share.tsx
+This component allows people to share the game on social media
 
-Challenge.tsx - This component allows people to challenge friends to 1v1 matches separate from tournaments. Players would wager their own bets. Random spectators would vote.
+##Challenge.tsx
+This component allows people to challenge friends to 1v1 matches separate from tournaments. Players would wager their own bets. Random spectators would vote.
 
-NextMatch - When a match concludes this button would summon the next match that needs to be voted on until every match i nthe tournament has been voted on by all competitors.
+## NextMatch
+When a match concludes this button would summon the next match that needs to be voted on until every match i nthe tournament has been voted on by all competitors.
