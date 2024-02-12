@@ -15,21 +15,22 @@ It costs 0.05 SOL or $5 to play. It’s free to spectate but you vote in SPL tok
 
 ## What tokens are supported?
 
-# SOL
+### SOL
 So11111111111111111111111111111111111111112
 
-# USDC
+### USDC
 EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v
 
-# RAIN
+### RAIN
 rainH85N1vCoerCi4cQ3w6mCf7oYUdrsTFtFzpaRwjL
 
-# JUP
+### JUP
 JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN
 
-# Bonk
+### Bonk
 DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
-Components
+
+# Components
 
 ## WalletBalance.tsx
 A component designed to fetch and display the balance of a wallet address from the Solana blockchain.
