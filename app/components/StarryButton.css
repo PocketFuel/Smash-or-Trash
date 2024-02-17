@@ -4,7 +4,6 @@
     0 0 35px #666, 0 0 40px #666, 0 0 50px #666, 0 0 75px #666;
 }
 .stars-bg {
-  background-image: url('/stars.png');
   background-size: cover;
   background-position: 0 0;
 }

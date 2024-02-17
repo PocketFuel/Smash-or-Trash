@@ -1,0 +1,11 @@
+/Users/Hans/smash-or-trash/program/target/debug/deps/libtextwrap-67429b8b25104f31.rmeta: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/indentation.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_separators.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_splitters.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/wrap_algorithms.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/line_ending.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/core.rs
+
+/Users/Hans/smash-or-trash/program/target/debug/deps/textwrap-67429b8b25104f31.d: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/indentation.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_separators.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_splitters.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/wrap_algorithms.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/line_ending.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/core.rs
+
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/lib.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/indentation.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_separators.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/word_splitters.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/wrap_algorithms.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/line_ending.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/textwrap-0.16.0/src/core.rs:

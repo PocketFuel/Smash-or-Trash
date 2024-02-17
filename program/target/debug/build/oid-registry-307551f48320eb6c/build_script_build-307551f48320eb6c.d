@@ -1,0 +1,8 @@
+/Users/Hans/smash-or-trash/program/target/debug/build/oid-registry-307551f48320eb6c/build_script_build-307551f48320eb6c: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/build.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/src/load.rs
+
+/Users/Hans/smash-or-trash/program/target/debug/build/oid-registry-307551f48320eb6c/build_script_build-307551f48320eb6c.d: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/build.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/src/load.rs
+
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/build.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1/src/load.rs:
+
+# env-dep:CARGO_MANIFEST_DIR=/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/oid-registry-0.6.1

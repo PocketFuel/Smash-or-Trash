@@ -1,0 +1,9 @@
+/Users/Hans/smash-or-trash/program/target/debug/deps/libspl_transfer_hook_interface-bdc6be44df22b79f.rmeta: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/error.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/instruction.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/offchain.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/onchain.rs
+
+/Users/Hans/smash-or-trash/program/target/debug/deps/spl_transfer_hook_interface-bdc6be44df22b79f.d: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/error.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/instruction.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/offchain.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/onchain.rs
+
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/lib.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/error.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/instruction.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/offchain.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-transfer-hook-interface-0.4.1/src/onchain.rs:

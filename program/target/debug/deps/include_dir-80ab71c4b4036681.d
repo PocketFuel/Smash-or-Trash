@@ -1,0 +1,11 @@
+/Users/Hans/smash-or-trash/program/target/debug/deps/libinclude_dir-80ab71c4b4036681.rmeta: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir_entry.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/file.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/../README.md
+
+/Users/Hans/smash-or-trash/program/target/debug/deps/libinclude_dir-80ab71c4b4036681.rlib: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir_entry.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/file.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/../README.md
+
+/Users/Hans/smash-or-trash/program/target/debug/deps/include_dir-80ab71c4b4036681.d: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/lib.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir_entry.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/file.rs /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/../README.md
+
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/lib.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/dir_entry.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/file.rs:
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/include_dir-0.7.3/src/../README.md:

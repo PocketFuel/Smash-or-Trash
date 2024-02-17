@@ -1,0 +1,820 @@
+<html lang="en" className="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Smash or Trash</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Redacted&display=swap" rel="stylesheet">    </head>
+    <body class="flex flex-col bg-gradient-to-b from-black via-primary to-eclipse font-['kanit'] mx-auto">
+        <!-- Header -->
+        <header class="relative isolate z-10 bg-black">
+            <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+              <div class="flex lg:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                  <span class="sr-only">Degen Trash Panda</span>
+                  <img class="h-8 w-auto" src="img/Logo.png" alt="">
+                </a>
+              </div>
+              <div class="flex lg:hidden">
+                <button type="button" class="dropdown -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                  <span class="sr-only">Open main menu</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </button>
+              </div>
+              <div class="hidden lg:flex lg:gap-x-12">
+                <div>
+                  <button type="button" class="explore-button flex items-center gap-x-1 text-sm font-semibold leading-6 text-day" aria-expanded="false">
+                    Explore
+                    <svg class="h-5 w-5 flex-none text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                    </svg>
+                  </button>
+          
+                  <!--
+                    'Product' flyout menu, show/hide based on flyout menu state.
+          
+                    Entering: "transition ease-out duration-200"
+                      From: "opacity-0 -translate-y-1"
+                      To: "opacity-100 translate-y-0"
+                    Leaving: "transition ease-in duration-150"
+                      From: "opacity-100 translate-y-0"
+                      To: "opacity-0 -translate-y-1"
+                  -->
+                  <div id="dropdown-explore" class="hidden absolute inset-x-0 top-0 -z-10 bg-darkestnight pt-14 shadow-lg ring-1 ring-gray-900/5 transition-all ease-in-out duration-500">
+                    <div class="mx-auto grid max-w-7xl grid-cols-4 gap-x-4 px-6 py-10 bg-darknight lg:px-8 xl:gap-x-8">
+                      <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-darknight">
+                        <div class="flex items-center justify-center rounded-lg group-hover:bg-night transition-all ease-in-out duration-500">
+                          <img src="img/TrashKing.png" alt="">
+                        </div>
+                        <a href="#" class="mt-6 block font-semibold text-primary">
+                          The Genesis Collection
+                          <span class="absolute inset-0"></span>
+                        </a>
+                        <p class="mt-1 text-day">The entire Pandaverse. 20K DTP. Including the Original and Immortal Collections.</p>
+                      </div>
+                      <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-darknight">
+                        <div class="flex items-center justify-center rounded-lg group-hover:bg-night transition-all ease-in-out duration-500">
+                          <img src="img/nft_onward.png" alt="">
+                        </div>
+                        <a href="#" class="mt-6 block font-semibold text-primary ">
+                          The Original Collection
+                          <span class="absolute inset-0"></span>
+                        </a>
+                        <p class="mt-1 text-day">The 17,605 DTP that were minted. Known as the "OGs". Mutable. Fluid rarity.</p>
+                      </div>
+                      <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-darknight">
+                        <div class="flex items-center justify-center rounded-lg group-hover:bg-night transition-all ease-in-out duration-500">
+                          <img src="img/Immortal.png" alt="">
+                        </div>
+                        <a href="#" class="mt-6 block font-semibold text-primary">
+                          The Immortal Collection
+                          <span class="absolute inset-0"></span>
+                        </a>
+                        <p class="mt-1 text-day">The 2,495 unminted DTP were reborn as DTP Immortals. Immutable. Fixed rarity.</p>
+                      </div>
+                      <div class="group relative rounded-lg p-6 text-sm leading-6 hover:bg-darknight">
+                        <div class="flex items-center justify-center rounded-lg group-hover:bg-night transition-all ease-in-out duration-500">
+                          <video autoplay loop muted src="img/rocket.webm" alt="santa rocket"></video>
+                        </div>
+                        <a href="#" class="mt-6 block font-semibold text-primary">
+                          The Holiday Universe
+                          <span class="absolute inset-0"></span>
+                        </a>
+                        <p class="mt-1 text-day">The first expansion to the Pandaverse, a new collection of Immortals with unique attributes</p>
+                      </div>
+                    </div>
+                    <div class="bg-night">
+                      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                        <div class="grid grid-cols-3 divide-x divide-night border-x border-night">
+                          <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-white hover:bg-dusk active:bg-mist">
+                            <svg class="h-5 w-5 flex-none fill-day" xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                            Follow on X
+                          </a>
+                          <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-white hover:bg-dusk active:bg-mist">
+                            <svg class="h-5 w-5 flex-none text-day" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M2 3.5A1.5 1.5 0 013.5 2h1.148a1.5 1.5 0 011.465 1.175l.716 3.223a1.5 1.5 0 01-1.052 1.767l-.933.267c-.41.117-.643.555-.48.95a11.542 11.542 0 006.254 6.254c.395.163.833-.07.95-.48l.267-.933a1.5 1.5 0 011.767-1.052l3.223.716A1.5 1.5 0 0118 15.352V16.5a1.5 1.5 0 01-1.5 1.5H15c-1.149 0-2.263-.15-3.326-.43A13.022 13.022 0 012.43 8.326 13.019 13.019 0 012 5V3.5z" clip-rule="evenodd" />
+                            </svg>
+                            Join Discord
+                          </a>
+                          <a href="#" class="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-white hover:bg-dusk active:bg-mist">
+                            <svg class="h-5 w-5 flex-none text-day" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M2.5 3A1.5 1.5 0 001 4.5v4A1.5 1.5 0 002.5 10h6A1.5 1.5 0 0010 8.5v-4A1.5 1.5 0 008.5 3h-6zm11 2A1.5 1.5 0 0012 6.5v7a1.5 1.5 0 001.5 1.5h4a1.5 1.5 0 001.5-1.5v-7A1.5 1.5 0 0017.5 5h-4zm-10 7A1.5 1.5 0 002 13.5v2A1.5 1.5 0 003.5 17h6a1.5 1.5 0 001.5-1.5v-2A1.5 1.5 0 009.5 12h-6z" clip-rule="evenodd" />
+                            </svg>
+                            Browse Collection
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a href="#" class="text-sm font-semibold leading-6 text-day">Community</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-day">Customize</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-day">Stake</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-day">Vote</a>
+              </div>
+              <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-day hover:text-primary">Connect Wallet <span aria-hidden="true">&rarr;</span></a>
+              </div>
+            </nav>
+            <!-- Mobile menu, show/hide based on menu open state. -->
+            <div class="hidden" role="dialog" aria-modal="true">
+              <!-- Background backdrop, show/hide based on slide-over state. -->
+              <div class="fixed inset-0 z-10"></div>
+              <div class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-black px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                  <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Degen Trash Panda</span>
+                    <img class="h-8 w-auto" src="img/Logo.png" alt="">
+                  </a>
+                  <button type="button" class="-m-2.5 rounded-md p-2.5 text-primary">
+                    <span class="sr-only">Close menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="mt-6 flow-root">
+                  <div class="-my-6 divide-y divide-gray-500/10">
+                    <div class="space-y-2 py-6">
+                      <div class="-mx-3">
+                        <button type="button" class="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-day hover:bg-darknight" aria-controls="disclosure-1" aria-expanded="false">
+                          Degenerate Trash Panda
+                          <!--
+                            Expand/collapse icon, toggle classes based on menu open state.
+          
+                            Open: "rotate-180", Closed: ""
+                          -->
+                          <svg class="h-5 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                          </svg>
+                        </button>
+                        <!-- 'Product' sub-menu, show/hide based on menu state. -->
+                        <div class="mt-2 space-y-2" id="disclosure-1">
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">About Us</a>
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">Collections</a>
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">Community</a>
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">Customize</a>
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">Stake</a>
+                          <a href="#" class="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-day hover:bg-darknight">Vote</a>
+                        </div>
+                      </div>
+                      <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-day hover:bg-darknight">Blog</a>
+                      <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-day hover:bg-darknight">Marketplace</a>
+                    </div>
+                    <div class="py-6">
+                      <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-day hover:bg-darknight">Connect Wallet</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </header>
+      </section>
+      <!-- Leaderboard -->
+      <div class="w-64 overflow-hideem relative mx-auto">
+        <img class="absolute object-cover" src="img/WordLogo.png" alt="">
+      </div>
+      <h1 class="text-6xl lg:text-9xl py-12 text-center text-mist lg:-mb-32 lg:mt-12 uppercase font-rethink font-extrabold">Smash or Trash</h1>
+      <section class="w-full grid grid-cols-2 max-w-5xl lg:mx-auto items-center md:grid-cols-3 lg:grid-cols-3 mb-3 gap-3 mx-2 border-1 rounded-lg bg-darkestnight p-6 md:pt-12 lg:pt-24 mt-24">
+          <!-- Card 1 -->
+          <label href="#" class="w-full col-span-3 lg:col-span-1 p-2 border-2 border-night bg-darknight hover:border-dusk hover:bg-night transition-all ease-in-out duration-700 active:border-mist rounded-xl relative">
+              <div class="flex flex-col w-full gap-2 rounded-md relative">
+                  <!-- Image -->
+                  <p class="text-lg font-bold text-black bg-night px-3 absolute top-0 right-0 mr-1 rounded-sm">No. 1</p>
+                  <input class="absolute z-20 bottom-0 right-0 mr-2 mb-2 bg-night h-4 w-4 border-2 border-dusk text-mist active:border-mist focus:ring-mist" id="no1" name="notification-method" type="checkbox">
+                  <img class="w-full -mr-8 -mb-2 aspect-ratio: 1/1; absolute bottom-0 right-0 z-20 sm:z-0" src="img/pit.png" alt="">
+                  <!-- Overview -->
+                  <div class="flex flex-col gap-2">
+                      <h4 class="text-sm uppercase font-bold text-day">
+                          DTP #1453
+                      </h4>
+                      <div class="flex flex-col gap-1.5 py-6 justify-start items-start">
+                          <p class="uppercase font-bold text-xs text-darknight bg-mist px-1.5 rounded-full">Genesis</p>
+                          <p class="uppercase font-bold text-xs text-darknight bg-grime px-1.5 rounded-full">OG</p>
+                      </div>
+                      <h4 class="text-xs uppercase font-bold text-dusk">
+                          Booted: False
+                      </h4>
+                  </div>
+              </div>
+            </label>  
+           <!-- Card 2 -->
+           <label href="#" class="w-full col-span-1 md:col-span-2 lg:col-span-1 p-2 border-2 mr-1.5 border-night bg-darknight hover:border-dusk hover:bg-night transition-all ease-in-out duration-700 active:border-mist rounded-xl relative">
+              <div class="flex flex-col w-full gap-2 rounded-md relative">
+                  <!-- Image -->
+                  <p class="text-lg font-bold text-black bg-night py-1 px-3 absolute top-0 right-0 mr-1 rounded-sm">No. 2</p>
+                  <input class="absolute z-20 bottom-0 right-0 mr-2 mb-2 bg-night h-4 w-4 border-2 border-dusk text-mist active:border-mist focus:ring-mist" id="no2" name="notification-method" type="checkbox">
+                  <img class="w-full aspect-ratio: 1/1; -mr-8 -mb-2 absolute bottom-0 right-0" src="img/vipr.png" alt="">
+                  <!-- Overview -->
+                  <div class="flex flex-col justify- gap-2">
+                      <h4 class="text-sm uppercase font-bold text-day">
+                          DTP #1453
+                      </h4>
+                      <div class="flex flex-col gap-1.5 py-6 justify-start items-start">
+                          <p class="uppercase font-bold text-xs text-darknight bg-mist px-1.5 rounded-full">Genesis</p>
+                          <p class="uppercase font-bold text-xs text-darknight bg-grime px-1.5 rounded-full">OG</p>
+                      </div>
+                      <h4 class="text-xs uppercase font-bold text-dusk">
+                          Booted: False
+                      </h4>
+                  </div>
+              </div>
+            </label>  
+          <!-- Card 3 -->
+          <label href="#" class="col-span-1 lg:col-span-1 p-2 border-2 border-night bg-darknight hover:border-dusk hover:bg-night transition-all ease-in-out duration-700 active:border-mist rounded-xl relative">
+              <div class="flex flex-col w-full gap-2 rounded-md relative">
+                  <!-- Image -->
+                  <p class="text-lg font-bold text-black bg-night py-1 px-3 absolute top-0 right-0 mr-1 rounded-sm">No. 3</p>
+                  <input class="absolute z-20 bottom-0 right-0 mr-2 mb-2 bg-night h-4 w-4 border-2 border-dusk text-mist active:border-mist focus:ring-mist" id="no3" name="notification-method" type="checkbox">
+                  <img class="w-full aspect-ratio: 1/1; absolute -mr-8 -mb-2 bottom-0 right-0" src="img/monterrey.png" alt="">
+                  <!-- Overview -->
+                  <div class="flex flex-col justify-start items-start gap-2">
+                      <h4 class="text-sm uppercase font-bold text-day">
+                          DTP #1453
+                      </h4>
+                      <div class="flex flex-col gap-1.5 py-6 justify-start items-start">
+                          <p class="uppercase font-bold text-xs text-darknight bg-mist px-1.5 rounded-full">Genesis</p>
+                          <p class="uppercase font-bold text-xs text-darknight bg-grime px-1.5 rounded-full">OG</p>
+                      </div>
+                      <h4 class="text-xs uppercase font-bold text-mist">
+                          Booted: True
+                      </h4>
+                  </div>
+              </div>
+            </label>
+          <!-- Vote Weight -->  
+          <p class="w-full col-span-3 py-6 text-center font-bold text-mist text-2xl">The best of the best, voted by the community.</p>                                          
+      </section>       
+      <!-- Page Title -->
+      <section class="flex flex-col max-w-6xl gap-2 mx-auto py-6 px-3 md:px-6 lg:px-12 justify-center items-center">
+          <!-- Intro -->
+          <div class="flex flex-col items-center gap-3">
+            <h1 class="font-bold text-center text-white font-splatter text-5xl lg:text-8xl">Play Smash or Trash</h1>
+            <p class="font-bold text-mist mt-4 text-4xl">Make it $RAIN on Champions</p>
+            <p class="text-day/50 text-lg">Select a Champion for battle, and ready up!</p>
+            <p class="text-day/50 text-lg">Vote on other matches while you wait.</p>
+          </div>
+          <!-- Participants -->
+          <div class="flex items-center gap-3">
+            <p class="font-bold text-day text-lg">Participants:</p> 
+            <p class="text-day text-lg">12/12</p>
+          </div>           
+      </section>
+      <!-- Competitiors -->
+      <section class="flex flex-col max-w-5xl gap-2 mx-auto py-3 px-3 pb-16 pt-0 md:px-6 lg:px-12">           
+          <!-- Buttons -->   
+          <div class="grid grid-cols-2 items-center py-4">            
+              <p class="text-day mr-6 text-lg">Next Tournament in<span class="ml-3 text-mist">50m</span></p> 
+              <a href="bracket.html" class="font-bold cursor-pointer text-center text-day text-lg shadow-lg border-2 border-yellow-300 rounded-xl px-4 py-3 hover:bg-grime hover:border-primary hover:text-white">
+              Check the bracket</a>
+          </div>
+          <!-- Add Competitors -->
+          <div class="flex flex-col relative w-full h-full items-center" id="add">
+              <div id="new-competitor" class="w-full md:max-w-5xl text-white h-full bg-eclipse bottom-0 font-bold shadow-lg border-2 border-night rounded-xl px-4 pb-1 pt-1">
+                  <!-- Submit Image -->
+                  <form id="player-form" class="flex flex-col w-full mx-auto py-3">
+                      <!-- Display Name -->
+                      <label for="display-name" class="block text-sm font-medium leading-6 text-day">Display Name</label>
+                      <input id="display-name" name="display-name" type="text" required class="mt-1 block w-full rounded-md border-night bg-darkestnight hover:bg-night shadow-sm font-light focus:border-mist focus:ring focus:bg-dusk focus:ring-mist/50 focus:ring-opacity-50" placeholder="Enter your display name">
+                      <label for="cover-photo" class="block text-sm font-medium leading-6 text-day">Upload your submission</label>
+                      <div class="mt-2 flex justify-center rounded-lg border border-dashed border-yellow-300 py-10">
+                          <div class="text-center">
+                          <svg class="mx-auto h-12 w-12 text-day/50" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                              <path fill-rule="evenodd" d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z" clip-rule="evenodd" />
+                          </svg>
+                          <div class="mt-4 flex text-sm leading-6 text-black">
+                              <label for="file-upload" class="relative cursor-pointer rounded-md bg-darkestnight border border-night font-semibold px-2 text-mist focus-within:outline-none focus-within:ring-2 focus-within:ring-day focus-within:ring-offset-2 focus-within:ring-offset-gray-900 text-mist hover:text-day">
+                              <span class="py-2 px-1">Upload a file</span>
+                              <input id="file-upload" required name="file-upload" type="file" class="sr-only">
+                              </label>
+                              <p class="pl-1 text-day">or drag and drop</p>
+                          </div>
+                          <p class="text-xs leading-5 text-day mt-2">PNG, JPG, GIF up to 10MB</p>
+                          </div>
+                      </div>
+                      <button class="w-full text-black bg-mist font-bold shadow-lg border-2 mt-3 border-yellow-300 rounded-xl p-2 hover:bg-grime hover:border-primary hover:text-white" type="submit">Add Player</button>
+                  </form>
+                  <img class="object-fit text-day mb-2 rounded-xl" id="preview" src="#" alt="Image preview" style="display: none;">
+              </div>
+          </div> 
+          <!-- Player List/Images -->
+          <div class="grid grid-cols-2">
+            <div id="player-list" class="flex flex-col gap-6">
+              <h2 class="font-semibold text-3xl mt-3 text-white">Players</h2>
+            </div>
+            <div id="image-management">
+              <h3 class="font-semibold text-xl mt-3 text-white">Manage Uploaded Images</h3>
+              <div id="image-list"></div>
+            </div>
+          </div>
+      </section>
+      <section class="flex flex-col items-center justify-start py-6 px-3 md:px-6 lg:px-12 border-t border-night">
+        <!-- Versus -->
+        <span class="font-bold text-day pt-3 text-lg">Round 1: Happening now</span>
+        <div class="flex gap-3 justify-between items-center">
+          <span id="p1" class="font-semibold text-3xl text-white">Player 1</span>
+          <span class="font-semibold text-3xl text-mist">vs</span>
+          <span id="p2" class="font-semibold text-3xl text-white">Player 2</span>
+        </div>
+        <div class="flex gap-3 py-6 items-center">
+          <h3 class="font-bold text-mist px-2 py-1 bg-eclipse border-2 border-night rounded-xl">Match: 1</h3>
+          <h3 id="match-pot" class="font-bold text-2xl text-mist px-2 py-1 bg-eclipse border-2 border-night rounded-xl">Pot: 0</h3>
+          <h3 id="round-pot" class="font-bold text-2xl text-mist px-2 py-1 bg-eclipse border-2 border-night rounded-xl">Pot: 0</h3>
+          <h3 class="font-bold text-mist px-2 py-1 bg-eclipse border-2 border-night rounded-xl">$RAIN</h3>
+        </div>
+        <!-- Timer -->
+        <div class="text-xl flex gap-3 text-mist" id="timer">
+          <span class="font-bold text-day text-lg">Time:</span>
+          <p class="">30<span class="ml-1">s</span></p>
+        </div>
+        <div class="grid grid-cols-2 max-w-5xl justify-start gap-3 py-6">
+          <!-- Competitor 1 -->
+          <div class="competitor relative w-full md:max-w-xs text-black bg-mist bottom-0 font-bold shadow-lg border-2 border-yellow-300 rounded-xl px-1 pb-3 pt-1 hover:bg-grime hover:border-primary hover:text-white" id="competitor1" tabindex="0">
+              <span class="absolute w-12 text-center top-0 right-5 mt-4 z-15 bg-eclipse rounded-full border-2 border-night px-1 py-.5 font-bold text-white" id="votes1">0</span>
+              <img class="object-fit mb-2 rounded-xl" src="img/monterrey.png" alt="Player 1">
+              <div class="mt-2 flex flex-col justify-between items-center">
+                  <button onclick="voteForCompetitor('1')" class="vote-button text-white font-bold py-2 px-4 rounded" data-competitorId="1">Vote for Player 1</button>
+                  <button id="ready1" class="ready-button w-full transition-all ease-in-ease-out duration-500 mt-3 md:max-w-xs text-white h-full bg-eclipse bottom-0 font-bold shadow-lg border-2 border-yellow-300 rounded-xl px-4 py-3 hover:border-primary focus:bg-none">Ready up</button>
+              </div>
+          </div>
+          <!-- Competitor 2 -->
+          <div class="competitor relative w-full md:max-w-xs text-black bg-mist bottom-0 font-bold shadow-lg border-2 border-yellow-300 rounded-xl px-1 pb-3 pt-1 hover:bg-grime hover:border-primary hover:text-white" id="competitor2" tabindex="0">
+              <span class="absolute w-12 text-center top-0 right-5 mt-4 z-15 bg-eclipse rounded-full border-2 border-night px-1 py-.5 font-bold text-white" id="votes2">0</span>
+              <img class="object-fit mb-2 rounded-xl" src="img/monterrey.png" alt="Player 2">
+              <div class="mt-2 flex flex-col justify-between items-center">
+                  <button onclick="voteForCompetitor('2')" class="vote-button text-white font-bold py-2 px-4 rounded" data-competitorId="2">Vote for Player 2</button>
+                  <button id="ready2" class="ready-button w-full transition-all ease-in-ease-out duration-500 mt-3 md:max-w-xs text-white h-full bg-eclipse bottom-0 font-bold shadow-lg border-2 border-yellow-300 rounded-xl px-4 py-3 hover:border-primary focus:bg-none">Ready up</button>
+              </div>
+          </div>
+        </div>          
+        </section>
+        <section>
+        <p class="w-full max-w-5xl col-span-3 py-3 text-center font-bold text-day text-xl">Wanna increase your click size?</p>  
+        <div id="vote-modifiers" class="w-full max-w-5xl grid grid-cols-4 col-span-3 gap-3 mb-3 bg-darkestnight">
+          <button id="shrimp" class="vote-modifier vote-modifier-active w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(1, 'shrimp')">
+            <p class="text-day">Shrimp</p>
+            <h2 class="font-bold text-3xl text-mist">1</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="lobster" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(2, 'lobster')">
+            <p class="text-day">Lobster</p>
+            <h2 class="font-bold text-3xl text-mist">2</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="fish" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(5)">
+            <p class="text-day">Fish</p>
+            <h2 class="font-bold text-3xl text-mist">5</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="big-fish" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(10)">
+            <p class="text-day">Big Fish</p>
+            <h2 class="font-bold text-3xl text-mist">10</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+        </div>
+        <!-- Turbo -->
+        <div class="w-full max-w-5xl grid grid-cols-4 col-span-3 gap-3 bg-darkestnight">
+          <button id="barracuda" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(20)">
+            <p class="text-day">Barracuda</p>
+            <h2 class="font-bold text-3xl text-mist">20</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="dolphin" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(50)">
+            <p class="text-day">Dolphin</p>
+            <h2 class="font-bold text-3xl text-mist">50</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="shark" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(100)">
+            <p class="text-day">Shark</p>
+            <h2 class="font-bold text-3xl text-mist">100</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+          <button id="whale" class="vote-modifier w-full gap-3 bg-eclipse rounded-xl border-2 border-night py-3 px-4 hover:border-dusk active:border-mist focus:border-mist transition-all ease-in-ease-out duration-700" onclick="setPointMultiplier(250)">
+            <p class="text-day">Whale</p>
+            <h2 class="font-bold text-3xl text-mist">250</h2>
+            <p class="text-day">$RAIN</p>
+          </button>
+        </div>
+        <!-- Subtotal -->
+        <h4 class="flex gap-3 text-2xl font-bold text-mist py-6 col-span-3 text-center">
+          <span id="tip-total">5</span><span>$RAIN</span>
+        </h4>
+        <button class="w-full max-w-5xl col-span-3 font-bold cursor-pointer text-center text-day text-lg shadow-lg border-2 border-yellow-300 rounded-xl px-4 py-3 hover:bg-grime hover:border-primary hover:text-white">Tip Them</button>
+    </section>
+      <!-- Rules -->
+      <section class="flex flex-col gap-3 max-w-3xl mx-auto py-6 px-3 md:px-6 lg:py-12">
+        <h3 class="font-bold text-day text-xl">Rules:</h3>
+        <ol class="flex flex-col gap-3">
+          <li class="text-day/50 text-lg">1 v 1. Single Elimination Tournament.</li>
+          <li class="text-day/50 text-lg">1st, 2nd, & 3rd Place Champions take 10% / 6% / 4% of the pot respectively.</li>
+          <li class="text-day/50 text-lg">Top 100 Voters share 10% of the pot.</li>
+          <li class="text-day/50 text-lg">40% of the pot goes to the LP.</li>
+          <li class="text-day/50 text-lg">30% of the pot used to buy DTP for giveaways</li>
+        </ol>
+      </section>
+      <!-- Countdown Modal -->
+      <div id="countdown-modal" class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+          <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+          <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+          <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="sm:flex sm:items-start">
+                <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                  <h3 class="text-lg leading-6 font-medium text-gray-900" id="modal-title">
+                    Game Starting in <span id="countdown">3</span> seconds
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div id="modal" class="hidden z-20 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50">
+          <div class="bg-eclipse p-4 rounded-xl">
+              <h2 id="modal-title" class="text-2xl text-white mb-2"></h2>
+              <p class="text-white" id="modal-message"></p>
+          </div>
+      </div>
+      <!-- Footer -->
+      <footer class="py-6 px-3 md:px-6 lg:px-12">
+          <p class="text-day">&copy; Degen Trash Panda. 2024.</p>
+      </footer>
+      <script>
+          let player1Ready = false;
+          let player2Ready = false;
+          let votes1 = 0;
+          let votes2 = 0;
+          let matchPot = 0; // Total votes for the current match
+          let roundPot = 0; // Total votes for all matches in the round
+          let gameInProgress = false;
+          let currentMultiplier = 1; // Default multiplier
+
+          function setPointMultiplier(multiplier, elementId) {
+              // Check if the clicked modifier is already active
+              if (currentMultiplier === multiplier) {
+                  currentMultiplier = 1; // Reset to default if the same modifier is clicked again
+                  document.getElementById(elementId).classList.remove('vote-modifier-active');
+              } else {
+                  // Update the currentMultiplier
+                  currentMultiplier = multiplier;
+                  console.log(`Point multiplier set to: ${currentMultiplier}`);
+
+                  // Remove active class from all modifiers
+                  document.querySelectorAll('.vote-modifier').forEach(button => {
+                      button.classList.remove('vote-modifier-active');
+                  });
+
+                  // Add active class to the clicked modifier
+                  document.getElementById(elementId).classList.add('vote-modifier-active');
+              }
+
+              // Update the display to reflect any changes
+              updateDisplay();
+          }
+
+          document.getElementById('player-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            const displayName = document.getElementById('display-name').value; // Get the player's name
+            const fileInput = document.getElementById('file-upload'); // Get the file input for the image
+
+            const newPlayer = { name: displayName, imgSrc: e.target.result };
+            const players = JSON.parse(localStorage.getItem('players')) || [];
+            players.push(newPlayer);
+            localStorage.setItem('players', JSON.stringify(players));
+
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    // Store data in localStorage
+                    const players = JSON.parse(localStorage.getItem('players')) || [];
+                    players.push({ name: displayName, imgSrc: e.target.result });
+                    localStorage.setItem('players', JSON.stringify(players));
+
+                    // Refresh the player list display
+                    displayNewPlayer(displayName, e.target.result);
+
+                    // Optionally, redirect to the bracket page
+                    window.location.href = 'bracket.html';
+                };
+
+                reader.readAsDataURL(fileInput.files[0]); // Read the image file
+            } else {
+                // If no image is selected, use a default image
+                displayNewPlayer(displayName, 'img/Immortal.png');
+            }
+
+            // Clear the form fields
+            document.getElementById('display-name').value = '';
+            document.getElementById('file-upload').value = '';
+        });
+
+        function displayNewPlayer(name, imgSrc) {
+            console.log("Adding new player:", name, imgSrc); // Debugging line
+            const playerList = document.getElementById('player-list');
+            const playerDiv = document.createElement('div');
+            playerDiv.className = 'player-info flex items-center gap-4 my-2';
+
+            const playerImage = document.createElement('img');
+            playerImage.src = imgSrc;
+            playerImage.alt = 'Player Image';
+            playerImage.className = 'w-20 h-20 object-cover rounded-md';
+            playerDiv.appendChild(playerImage);
+
+            const playerName = document.createElement('p');
+            playerName.textContent = name;
+            playerName.className = 'text-white font-bold';
+            playerDiv.appendChild(playerName);
+
+            playerList.appendChild(playerDiv);
+        }
+
+        function updateImageList() {
+            const imageList = document.getElementById('image-list');
+            imageList.innerHTML = ''; // Clear existing list
+            const players = JSON.parse(localStorage.getItem('players')) || [];
+            players.forEach((player, index) => {
+                const imgDiv = document.createElement('div');
+                imgDiv.className = 'image-item';
+                imgDiv.innerHTML = `
+                    <img src="${player.imgSrc}" alt="Player Image" class="w-20 h-20 object-cover rounded-md">
+                    <button class="text-white" onclick="deleteImage(${index})">Delete</button>
+                `;
+                imageList.appendChild(imgDiv);
+            });
+        }
+
+        function deleteImage(index) {
+            let players = JSON.parse(localStorage.getItem('players')) || [];
+            players.splice(index, 1); // Remove the player at the specified index
+            localStorage.setItem('players', JSON.stringify(players));
+            updateImageList(); // Refresh the list
+        }
+
+        // Initial list update
+        document.addEventListener('DOMContentLoaded', updateImageList);
+
+        // Call displayNewPlayer for each player in localStorage on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const players = JSON.parse(localStorage.getItem('players')) || [];
+            players.forEach(player => {
+                displayNewPlayer(player.name, player.imgSrc);
+            });
+        });
+
+          function populateBracketRandomly() {
+              let players = JSON.parse(localStorage.getItem('players')) || [];
+              players = shuffleArray(players); // Shuffle the players array
+              // Logic to populate the bracket goes here
+              // This will depend on how your bracket is structured in HTML
+              }
+
+              // Function to shuffle an array
+              function shuffleArray(array) {
+                  for (let i = array.length - 1; i > 0; i--) {
+                      const j = Math.floor(Math.random() * (i + 1));
+                      [array[i], array[j]] = [array[j], array[i]];
+                  }
+                  return array;
+              }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.getElementById('ready1').addEventListener('click', function() { readyUp('1'); });
+                document.getElementById('ready2').addEventListener('click', function() { readyUp('2'); });
+            });
+
+            function readyUp(playerId) {
+                if (playerId === 1) {
+                    player1Ready = true;
+                    document.getElementById('ready1').textContent = 'Readied Up!';
+                    document.getElementById('ready1').classList.add('hidden'); // Hide the button
+                } else if (playerId === 2) {
+                    player2Ready = true;
+                    document.getElementById('ready2').classList.add('hidden'); // Hide the button
+                }
+
+                if (player1Ready && player2Ready && !gameInProgress) {
+                    startGame();
+                }
+            }
+
+            function startGame() {
+                gameInProgress = true;
+                console.log('Game is starting...');
+                document.getElementById('countdown-modal').classList.remove('hidden');
+                let countdown = 3; // Countdown before the game starts
+                document.getElementById('countdown').textContent = countdown;
+                let countdownTimer = setInterval(() => {
+                    countdown--;
+                    document.getElementById('countdown').textContent = countdown;
+                    if (countdown <= 0) {
+                        clearInterval(countdownTimer);
+                        document.getElementById('countdown-modal').classList.add('hidden');
+                        playGame(); // Start the actual game logic
+                    }
+                }, 1000);
+            }
+
+            function playGame() {
+                console.log('Game is in progress...');
+                // This is where the 30-second game timer should start
+                let gameDuration = 30; // Game duration in seconds
+                document.getElementById('timer').textContent = `Time remaining: ${gameDuration}s`;
+                let gameTimer = setInterval(() => {
+                    gameDuration--;
+                    document.getElementById('timer').textContent = `Time remaining: ${gameDuration}s`;
+                    if (gameDuration <= 0) {
+                        clearInterval(gameTimer);
+                        concludeMatch(); // Conclude the game
+                    }
+                }, 1000);
+            }
+
+            function concludeMatch() {
+                console.log('Game Over!');
+                alert('Game Over!'); // Notify users that the game has ended
+                resetReadyStates(); // Prepare for a new game
+            }
+
+            function resetReadyStates() {
+                player1Ready = false;
+                player2Ready = false;
+                gameInProgress = false;
+                document.getElementById('ready1').classList.remove('hidden');
+                document.getElementById('ready2').classList.remove('hidden');
+                document.getElementById('ready1').textContent = 'Ready Up';
+                document.getElementById('ready2').textContent = 'Ready Up';
+                // Reset any other game state as necessary
+            }
+
+          // Function to update the display of votes and pots
+          function updateDisplay() {
+              console.log('Updating display with current votes and pots.'); // Debugging line
+              document.getElementById('votes1').textContent = votes1;
+              document.getElementById('votes2').textContent = votes2;
+              document.getElementById('match-pot').textContent = `Pot: ${matchPot}`;
+              document.getElementById('round-pot').textContent = `Round Pot: ${roundPot}`;
+          }
+
+          // Consolidated vote handling function
+          function voteForCompetitor(competitorId) {
+              if (!gameInProgress) {
+                  alert('Voting is only allowed during the game.');
+                  return;
+              }
+              const votesToAdd = 1 * currentMultiplier; // Apply the multiplier
+              if (competitorId === '1') {
+                  votes1 += votesToAdd;
+              } else if (competitorId === '2') {
+                  votes2 += votesToAdd;
+              }
+              matchPot += votesToAdd; // Update the pot with the multiplied votes
+              
+              updateDisplay(); // Make sure this function updates the UI based on the new values
+          }
+
+          // Function to start the game
+          function startTimer() {
+              gameInProgress = true;
+              let time = 30; // Game duration in seconds
+              let timer = setInterval(() => {
+                  if (time > 0) {
+                      time--;
+                      document.getElementById('timer').textContent = `Time remaining: ${time}s`;
+                  } else {
+                      clearInterval(timer);
+                      gameInProgress = false;
+                      concludeMatch();
+                  }
+              }, 1000);
+          }
+
+          document.addEventListener('DOMContentLoaded', () => {
+          // Attach event listeners to "ready" buttons
+          const readyButton1 = document.getElementById('ready1');
+          const readyButton2 = document.getElementById('ready2');
+
+          if (readyButton1 && readyButton2) {
+              readyButton1.addEventListener('click', readyUp);
+              readyButton2.addEventListener('click', readyUp);
+              console.log('Event listeners attached to ready buttons.');
+          } else {
+              console.log('Ready buttons not found.');
+          }
+           });
+          
+          document.querySelectorAll('.competitor').forEach(competitor => {
+              competitor.addEventListener('keydown', function(event) {
+                  // Check if the space bar was pressed
+                  if (event.keyCode === 32 || event.code === "Space") {
+                      event.preventDefault(); // Prevent the default action to stop scrolling
+                      this.click(); // Trigger a click event on the competitor div
+                  }
+              });
+          });
+
+          document.addEventListener('DOMContentLoaded', () => {
+              document.querySelectorAll('.ready-button').forEach(button => {
+                  button.addEventListener('click', function() {
+                      // Simplified logic here
+                      readyUp();
+                  });
+              });
+          });
+
+          // Handle the ready up process
+          function readyUp(playerId) {
+              if (playerId === '1') {
+                  player1Ready = true;
+                  document.getElementById('ready1').classList.add('hidden'); // Hide the button
+                  document.getElementById('ready1').textContent = 'Readied Up!';
+              } else if (playerId === '2') {
+                  player2Ready = true;
+                  document.getElementById('ready2').classList.add('hidden'); // Hide the button
+                  document.getElementById('ready2').textContent = 'Readied Up!';
+              }
+
+              if (player1Ready && player2Ready && !gameInProgress) {
+                  startGame();
+              }
+          }
+
+          // Function to conclude the current match and prepare for the next
+          function concludeMatch() {
+              let winnerText = votes1 > votes2 ? 'Player 1 wins!' : votes2 > votes1 ? 'Player 2 wins!' : "It's a tie!";
+              alert(`Game Over! ${winnerText}`);
+              roundPot += matchPot; // Add match pot to round pot
+              updateDisplay(); // Reset and update display for the next match
+              // Reset for a new match
+              votes1 = 0;
+              votes2 = 0;
+              matchPot = 0;
+              // Reset the multiplier and remove active class from all modifiers
+              currentMultiplier = 1;
+              document.querySelectorAll('.vote-modifier').forEach(button => {
+                  button.classList.remove('vote-modifier-active');
+              });
+              // Update the display for a clean state
+              updateDisplay();
+          }
+
+          document.querySelectorAll('.competitor').forEach(card => {
+              card.addEventListener('click', function(event) {
+                  if (!event.target.matches('button')) {
+                      // Assuming you want to trigger voting for the competitor
+                      const competitorId = this.id === 'competitor1' ? '1' : '2';
+                      voteForCompetitor(competitorId);
+                  }
+              });
+          });
+
+          function voteForCompetitor(competitorId) {
+              console.log(`Current Multiplier: ${currentMultiplier}`); // Debugging line
+              if (!gameInProgress) {
+                  alert('Voting is only allowed during the game.');
+                  return;
+              }
+              const votesToAdd = 1 * currentMultiplier; // Apply the multiplier
+              console.log(`Votes to Add: ${votesToAdd}`);
+              if (!gameInProgress) {
+                  alert('Voting is only allowed during the game.');
+                  return;
+          }
+          // Increment the correct player's vote counter and the match pot
+          if (competitorId === '1') {
+              votes1++;
+          } else if (competitorId === '2') {
+              votes2++;
+          }
+          matchPot++;
+          // Update the display for player votes, match pot, and round pot
+          updateDisplay();
+          }
+
+          // Function to update the display of votes and pots
+          function updateDisplay() {
+              console.log('Updating display with current votes and pots.'); // Debugging line
+              document.getElementById('votes1').textContent = votes1;
+              document.getElementById('votes2').textContent = votes2;
+              document.getElementById('match-pot').textContent = `Pot: ${matchPot}`;
+              document.getElementById('round-pot').textContent = `Round Pot: ${roundPot}`;
+          }
+
+          // Preventing button clicks inside the card from triggering the card's click event
+          document.querySelectorAll('.competitor button').forEach(button => {
+              button.addEventListener('click', function(event) {
+                  event.stopPropagation(); // Prevent click from reaching the card
+              });
+          });
+        </script>       
+  </body>
+</html>

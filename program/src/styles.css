@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rethink+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+      font-family: "Rethink Sans", sans-serif;
+      font-display: swap;
+    }
+  }
+
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+
+    .card-hover {
+        @apply hover:bg-white ease-in-out duration-600;
+    }
+
+    .dark .card-hover {
+        @apply hover:bg-gray-800;
+    }
+}
+
+html {
+    font-family: "Rethink Sans", sans-serif;
+    font-display: swap;
+}
+
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+    margin: 50px auto;
+}
+
+/* ... rest of your .avatar-upload styles ... */
+
+.progress-ring__circle {
+    stroke-dasharray: 400, 400;
+    transition: stroke-dashoffset 0.35s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+.card {
+    @apply flex-col justify-start items-center gap-3 inline-flex overflow-hidden w-48 rounded-xl border-2 bg-gradient-to-b from-white to-blue-200/50 hover:bg-gradient-to-b from-white to-blue-100;
+}
+
+.dark .card {
+    @apply bg-gradient-to-b from-black to-blue-900/50 hover:bg-gradient-to-b from-black to-blue-800;
+}
+
+.card-lg {
+    @apply flex-col justify-start gap-3 inline-flex overflow-hidden w-64 rounded-xl border-2 bg-gradient-to-b from-white to-blue-200/50;
+}
+
+.dark .card-lg {
+    @apply bg-gradient-to-b from-black to-blue-900/50;
+}
+
+.card-xl {
+    @apply flex-col pb-4 justify-start gap-3 inline-flex overflow-hidden w-64 md:w-80 rounded-xl border-2 bg-gradient-to-b from-white to-blue-200/50;
+}
+
+.dark .card-xl {
+    @apply bg-gradient-to-b from-black to-blue-900/50;
+}
+
+#counter {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+ol {
+    list-style-type: decimal;
+  }
+
+.fade-out {
+    transition: opacity 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.vote-modifier-active {
+    background-color: #4CAF50; /* Example active state color */
+    border-color: #367c39; /* Darker border for contrast */
+    color: white; /* Text color */
+}

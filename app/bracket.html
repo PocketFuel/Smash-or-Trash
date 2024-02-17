@@ -1,0 +1,271 @@
+<html lang="en" className="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bracket</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,700;1,400;1,700&family=Redacted&display=swap" rel="stylesheet">    
+    </head>
+    <body class="bg-gradient-to-b from-black via-primary to-eclipse font-['kanit'] mx-auto">
+        <!-- Bracket Section -->
+        <section class="w-full flex flex-col mx-auto p-6">
+            <h2 class="text-white text-3xl font-bold mb-6">Tournament Bracket</h2>
+            <div class="grid grid-cols-4 grid-flow-row auto-rows-max gap-6 py-6">
+                <!-- Round 1 -->
+                <div class="col-span-1 border-l-2 border-night pl-3 md:pl-6">
+                    <h3 class="text-mist text-xl font-semibold mb-4">Round 1</h3>
+                    <!-- Matches in Round 1 -->
+                    <div id="round1" class="space-y-4 flex flex-col gap-3">
+                        <!-- Match 1 -->
+                        <div class="w-full flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 1</h3>
+                            <div id="player1-slot" data-populated="false" class="flex items-center justify-between relative competitor text-white bg-grime shadow-lg border-2 border-primary rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p1-img" class="absolute w-20 right-0 bottom-0" src="#" alt="competitor profile image" style="display: none;">
+                                <span>Competitor 1</span> <!-- Wrap the name for easier targeting -->
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-primary">Winner!</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player2-slot" data-populated="false" class="flex opacity-25 items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border-2 border-yellow-300 rounded-xl px-2 py-2">
+                                <img id="p2-img" class="w-12" src="#" alt="competitor 2 profile image" style="display: none;">
+                                <span>Competitor 2</span>
+                                <span class="text-day/50">KO</span>
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-mist">+100 Rep</p>
+                            </div>
+                        </div>
+                        <!-- Match 2 -->
+                        <div class="w-full flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 2</h3>
+                            <div id="player3-slot" data-populated="false" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border-2 border-night rounded-xl px-2 py-2">
+                                <img id="p3-img" class="w-12" src="#" alt="competitor 3 profile image" style="display: none;">
+                                <span>Competitor 3</span>
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-day">Waiting...</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player4-slot" data-populated="false" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-yellow-300 rounded-xl px-2 py-2 hover:border-primary">
+                                <img id="p4-img" class="w-12" src="#" alt="competitor 4 profile image" style="display: none;">
+                                <span>Competitor 4</span>
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-mist">Ready!</p>
+                            </div>
+                        </div>   
+                        <!-- Match 3 -->
+                        <div class="w-full flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 3</h3>
+                            <div id="player5-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p5-img" class="w-12 hidden" src="#" alt="competitor 5 profile image" style="display: none;">
+                                <span>Competitor 5</span>
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-day">Searching...</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player6-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p6-img" class="w-12 hidden" src="#" alt="competitor 6 profile image" style="display: none;">
+                                <span>Competitor 6</span>
+                                <p class="absolute -bottom-5 right-4 text-xs font-bold uppercase text-mist">Joining...</p>
+                            </div>
+                        </div>
+                        <!-- Match 4 -->
+                        <div class="w-full flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 4</h3>
+                            <div id="player7-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p7-img" class="w-12 hidden" src="#" alt="competitor 7 profile image" style="display: none;">
+                                <span>Competitor 7</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player8-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p8-img" class="w-12 hidden" src="#" alt="competitor 8 profile image" style="display: none;">
+                                <span>Competitor 8</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                        </div>    
+                        <!-- Match 5 -->
+                        <div class="w-full flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 5</h3>
+                            <div id="player9-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p9-img" class="w-12 hidden" src="#" alt="competitor 9 profile image" style="display: none;">
+                                <span>Competitor 9</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player10-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p10-img" class="w-12 hidden" src="#" alt="competitor 10 profile image" style="display: none;">
+                                <span>Competitor 10</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                        </div>
+                        <!-- Match 6 -->
+                        <div class="w-full flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 6</h3>
+                            <div id="player11-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p11-img" class="w-12 hidden" src="#" alt="competitor 11 profile image" style="display: none;">
+                                <span>Competitor 11</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                            <p class="text-mist text-3xl">vs</p>
+                            <div id="player12-slot" class="flex items-center gap-3 h-12 relative competitor text-white bg-eclipse shadow-lg border border-night rounded-xl px-4 py-2 hover:border-primary">
+                                <img id="p12-img" class="w-12 hidden" src="#" alt="competitor 12 profile image" style="display: none;">
+                                <span>Competitor 12</span>
+                                <p class="absolute cursor-pointer right-4 text-xs font-bold uppercase text-mist">Join</p>
+                            </div>
+                        </div>                   
+                    </div>
+                </div>
+                <!-- Round 2 -->
+                <div class="col-span-1 w-full border-l-2 border-night pl-3 md:pl-6">
+                    <h3 class="text-mist text-xl font-semibold mb-4">Round 2</h3>
+                    <div id="round2" class="space-y-4 flex flex-col gap-3">
+                        <!-- Match 7 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 7</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 1</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 2</div>
+                        </div>
+                        <!-- Match 8 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 8</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 3</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 4</div>
+                        </div>   
+                        <!-- Match 9 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 9</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 5</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 6</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Round 3 -->
+                <div class="col-span-1 w-full border-l-2 border-night pl-3 md:pl-6">
+                    <h3 class="text-mist text-xl font-semibold mb-4">Semi-Finals</h3>
+                    <div id="round3" class="space-y-4 flex flex-col gap-3">
+                        <!-- Match 10 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 10</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 7</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 8</div>
+                        </div>
+                        <!-- Match 11 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 11</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 9</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Runner up by Score</div>
+                        </div>                        
+                    </div>
+                </div>
+                <!-- Final -->
+                <div class="col-span-1 w-full border-l-2 border-night pl-3 md:pl-6"> 
+                    <h3 class="text-mist text-xl font-semibold mb-4">Final</h3>
+                    <div id="final" class="space-y-4 flex flex-col gap-3">
+                        <!-- Match 12 -->
+                        <div class="flex flex-col match gap-2">
+                            <h3 class="font-bold text-white text-lg">Match 12</h3>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 10</div>
+                            <p class="text-mist">vs</p>
+                            <div class="competitor text-day/50 shadow-lg border-2 border-dotted border-night rounded-xl px-4 py-2">Winner of Match 11</div>
+                        </div>                      
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Rules -->
+        <section class="flex flex-col gap-3 max-w-3xl mx-auto py-6 px-3 md:px-6 lg:py-12">
+            <h3 class="font-bold text-day text-xl">Rules:</h3>
+            <ol class="flex flex-col gap-3">
+                <li class="text-day/50 text-lg">1 v 1. Single Elimination Tournament.</li>
+                <li class="text-day/50 text-lg">1st, 2nd, & 3rd Place Champions take 10% / 6% / 4% of the pot respectively.</li>
+                <li class="text-day/50 text-lg">Top 100 Voters share 10% of the pot.</li>
+                <li class="text-day/50 text-lg">40% of the pot goes to the LP.</li>
+                <li class="text-day/50 text-lg">30% of the pot used to buy DTP for giveaways</li>
+            </ol>
+        </section>
+        <!-- Add other sections as needed -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const players = JSON.parse(localStorage.getItem('players')) || [];
+                players.forEach((player, index) => {
+                    if (index < 12) { // Assuming 12 slots
+                        const playerSlot = document.getElementById(`player${index + 1}-slot`);
+                        if (playerSlot) {
+                            const imgElement = playerSlot.querySelector('img');
+                            const spanElement = playerSlot.querySelector('span');
+                            imgElement.src = player.imgSrc;
+                            imgElement.style.display = 'block';
+                            spanElement.textContent = player.name;
+                            playerSlot.setAttribute('data-populated', 'true');
+                        }
+                    }
+                });
+            });
+
+        function populateBracketRandomly() {
+            let players = JSON.parse(localStorage.getItem('players')) || [];
+            players = shuffleArray(players);
+            players.forEach((player, index) => {
+                document.getElementById(`player${index + 1}-slot`).textContent = player.displayName;
+            });
+        }
+
+        // Load competitors and generate matches
+        const competitors = loadCompetitors();
+        generateMatches('round1', 6); // Assuming 6 matches in round 1 for 12 competitors
+        generateMatches('round2', 3); // 3 matches in round 2
+        generateMatches('round3', 2); // 2 matches in round 3 (semi-finals)
+        generateMatches('final', 1); // 1 match in the final
+   
+        document.getElementById('player-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            const displayName = document.getElementById('display-name').value; // Get the player's name
+            const fileInput = document.getElementById('file-upload'); // Get the file input for the image
+
+            if (fileInput.files.length > 0) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    // Once the file is read, update the bracket
+                    updateBracket(displayName, e.target.result);
+                };
+
+                reader.readAsDataURL(fileInput.files[0]); // Read the image file
+            } else {
+                // If no image is selected, use a default image
+                updateBracket(displayName, 'img/default.png'); // Assuming you have a default image
+            }
+        });
+
+        function updateBracket(name, imgSrc) {
+            // Find the first empty slot in the bracket
+            const emptySlot = document.querySelector('.match .competitor:not([data-populated="true"])');
+            if (emptySlot) {
+                // Update the slot with the new player's data
+                const imgElement = emptySlot.querySelector('img');
+                imgElement.src = imgSrc; // Update the image source
+                imgElement.style.display = 'block'; // Make sure the image is visible
+
+                // Update the competitor's name
+                // Assuming the competitor's name is directly within the div and not wrapped in another tag
+                const nameLocation = emptySlot.childNodes[3]; // Directly targeting the text node might not be reliable
+                if (nameLocation.nodeType === Node.TEXT_NODE) {
+                    nameLocation.nodeValue = name; // Update the competitor's name
+                } else {
+                    // If the direct child is not a text node, it means the structure might be different than expected
+                    console.error("Unexpected structure, competitor's name not updated.");
+                }
+
+                emptySlot.setAttribute('data-populated', 'true'); // Mark the slot as populated
+            } else {
+                alert('All slots are filled.');
+            }
+        }
+
+        </script>
+    </body>
+</html>

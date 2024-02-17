@@ -1,0 +1,5 @@
+/Users/Hans/smash-or-trash/program/target/debug/build/generic-array-d5d74ada36e46e93/build_script_build-d5d74ada36e46e93: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/generic-array-0.14.7/build.rs
+
+/Users/Hans/smash-or-trash/program/target/debug/build/generic-array-d5d74ada36e46e93/build_script_build-d5d74ada36e46e93.d: /Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/generic-array-0.14.7/build.rs
+
+/Users/Hans/.cargo/registry/src/index.crates.io-6f17d22bba15001f/generic-array-0.14.7/build.rs:

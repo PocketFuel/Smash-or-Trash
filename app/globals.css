@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Work+Sans:wght@600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Rethink+Sans:ital,wght@0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -12,20 +15,8 @@ html,
 body,
 #root {
   width: 100%;
-  height: 100%;
   margin: 0;
   padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  overflow: hidden;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
 }
 
 #root {
@@ -40,10 +31,48 @@ body {
 }
 
 body {
-  position: fixed;
-  overflow: hidden;
-  overscroll-behavior-y: none;
+  height: 100%;
   font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica,
     ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+    html {
+      font-display: swap;
+    }
+  }
+
+#counter {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+ol {
+    list-style-type: decimal;
+  }
+
+
+.vote-modifier-active {
+    background-color: #4CAF50; /* Example active state color */
+    border-color: #367c39; /* Darker border for contrast */
+    color: white; /* Text color */
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.force-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.test-background {
+  background-color: magenta; /* Highly visible color for testing */
+}
+
+.reset-all {
+  all: initial;
+  font-family: inherit; /* To keep the font consistent */
 }

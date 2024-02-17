@@ -1,20 +1,59 @@
-import type { Config } from 'tailwindcss'
+import { Config } from 'tailwindcss';
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  darkMode: 'class',
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
+      backgroundOpacity: ['responsive', 'hover', 'focus', 'active'],
+      transitionProperty: ['responsive', 'hover', 'focus'],
+      transitionDuration: ['responsive', 'hover', 'focus'],
+      transitionTimingFunction: ['responsive', 'hover', 'focus'],
+      // Add other plugins as needed
+    },
+  },
+  content: ["./src/**/*.{html,js}", "./public/**/*.{html,js}", "./node_modules/flowbite/**/*.js", "./src/**/*.{html,js,ts,tsx}", "./app/**/*.{html,js,ts,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        'Kanit': ['Kanit'],
+        'redacted': ['redacted'],
+      },
+      colors: {
+        black: '#000000',
+        darkestnight: '#090909',
+        eclipse: '#131313',
+        dusk: '#434141',
+        day: '#D1CDBF',
+        mist: '#C59F1A',
+        dawn: '#7F7E87',
+        night: '#232222',
+        sunnyday: '#C59F1A',
+        rust: '#AD4242',
+        grundy: '#621D1D',
+        brightrust: '#FF7676',
+        grime: '#4C621D',
+        white: '#FFFFFF',
+        snow: '#BCEAFF',
+        sleet: '#90DDFF',
+        rain: '#37C1FF',
+        hail: '#0074A9',
+        sunset: '#90DDFF',
+        purple: '#491661',
+        sand: '#EEBA7D',
+        sun: '#F19931',
+        mud: '#804A0A',
+        soil: '#372005',
+        primary: '#ABAD42', //chartreuse
+        secondary: '#621D1D', //rust
+        tertiary: '#C59F1A', //sunnyday
       },
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [
+    // Ensure you have these plugins installed or remove them if not needed
+  ],
+};
+
+export default config;
