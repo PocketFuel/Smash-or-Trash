@@ -3,7 +3,7 @@ import { createUmi } from '@metaplex-foundation/umi-bundle-defaults';
 import { Connection, PublicKey } from '@solana/web3.js';
 import { mplTokenMetadata as Metadata } from '@metaplex-foundation/mpl-token-metadata';
 
-const Solana_RPC_Endpoint = "https://mainnet.helius-rpc.com/?api-key=b6b97ed4-c507-40f7-ad75-e46051af0379";
+const Solana_RPC_Endpoint = "https://rpc.hellomoon.io/d98d2207-6cab-45bd-ae2a-0cfc236a0e107-40f7-ad75-e46051af0379";
 
 interface NFT {
   name: string;
